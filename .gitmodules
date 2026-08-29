@@ -1,0 +1,11 @@
+[submodule "src/bond_core"]
+    path = src/bond_core
+    url = https://github.com/ros/bond_core.git
+
+[submodule "src/ldlidar_ros2"]
+    path = src/ldlidar_ros2
+    url = https://github.com/ldrobotSensorTeam/ldlidar_ros2.git
+
+[submodule "src/slam_toolbox"]
+    path = src/slam_toolbox
+    url = https://github.com/SteveMacenski/slam_toolbox.git
