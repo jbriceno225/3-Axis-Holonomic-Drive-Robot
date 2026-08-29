@@ -1,0 +1,13 @@
+diff --git a/src/log_module.cpp b/src/log_module.cpp
+index 5fff546..a5eca22 100644
+--- a/src/log_module.cpp
++++ b/src/log_module.cpp
+@@ -17,6 +17,8 @@
+ **/
+ #include "ldlidar_driver/log_module.h"
+ 
++#include <pthread.h>
++
+ #include <time.h>
+ #include <string.h>
+ 
