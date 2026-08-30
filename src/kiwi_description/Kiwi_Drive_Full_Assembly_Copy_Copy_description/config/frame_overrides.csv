@@ -1,0 +1,6 @@
+link,parent_joint,joint_type,rule,original_roll_deg,original_pitch_deg,original_yaw_deg,post_roll_deg,post_pitch_deg,post_yaw_deg,role
+Lidar_Mounting_Plate,base_link_to_lidar_link,fixed,keep,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,unchanged
+base_link,,root,auto,0.000000,0.000000,-120.000000,0.000000,0.000000,0.000000,root_x_forward_z_up
+wheel_1_link_Omni_Wheel,wheel_1_to_base_link,continuous,auto,-0.555057,-27.752017,150.256082,-91.004932,1.782209,60.576236,revolute_axis_z
+wheel_2_link_Omni_Wheel,wheel_2_to_base_link,continuous,auto,1.839926,-28.514831,-90.886073,90.207588,-0.002236,0.616989,revolute_axis_z
+wheel_3_link_Omni_Wheel,wheel_3_to_base_link,continuous,auto,-0.124384,-29.965614,30.060881,-88.787154,2.046426,-59.337138,revolute_axis_z

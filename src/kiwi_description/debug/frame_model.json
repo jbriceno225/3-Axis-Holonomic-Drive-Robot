@@ -1,0 +1,1547 @@
+{
+  "cache_version": 1,
+  "config": {
+    "collision_auto_method": "primitive",
+    "collision_format": "stl",
+    "export_collision_mesh": true,
+    "export_visual_mesh": true,
+    "frame_convention": "ros",
+    "frame_overrides_filename": "frame_overrides.csv",
+    "include_debug": true,
+    "include_docs": true,
+    "include_launch": true,
+    "include_readme": true,
+    "include_robot_data_yaml": true,
+    "include_ros2_control": true,
+    "include_rviz": true,
+    "include_screenshot": true,
+    "mesh_refinement": "medium",
+    "output_dir": "C:/Users/javie/OneDrive/Documents/3-Axis-Holonomic-Drive-Robot/src/kiwi_description",
+    "override_explicit_collision": false,
+    "package_name": "Kiwi_Drive_Full_Assembly_Copy_Copy_description",
+    "robot_prefix": "",
+    "ros2_control_command_interfaces": [
+      "position",
+      "velocity"
+    ],
+    "ros2_control_hardware_plugin": "mock_components/GenericSystem",
+    "ros2_control_update_rate": 100,
+    "use_xacro": false,
+    "verbosity": "verbose",
+    "visual_format": "dae",
+    "zip_name": "",
+    "zip_output": false
+  },
+  "model": {
+    "assemblies": {
+      "A1_ASM": {
+        "children_assemblies": [],
+        "depth": 4,
+        "global_offset": [
+          0.26473439103709634,
+          -0.15284447192902106,
+          -0.02896199999999987
+        ],
+        "global_rotation": [
+          2.154530255887751e-15,
+          -0.5000000000000255,
+          0.8660254037844246,
+          -4.754606515804478e-16,
+          -0.8660254037844239,
+          -0.5000000000000256,
+          1.0,
+          6.064839706036307e-16,
+          -2.1762350572443094e-15
+        ],
+        "joints": [],
+        "links": [],
+        "name": "A1_ASM",
+        "parent_assembly": "Omni_Wheel"
+      },
+      "Battery_Mount_Assembly": {
+        "children_assemblies": [],
+        "depth": 1,
+        "global_offset": [
+          -0.06999999999999883,
+          -0.07999999999999916,
+          -0.02075
+        ],
+        "global_rotation": [
+          1.440514374451137e-14,
+          -1.0000000000000004,
+          -6.250010103773734e-44,
+          1.0000000000000004,
+          1.4405143744511406e-14,
+          5.681827367067029e-45,
+          4.338734978715571e-30,
+          -3.9443045261044354e-31,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Battery_Mount_Assembly",
+        "parent_assembly": "base_link"
+      },
+      "Converter_DCDC_RECOM_R_78E_0_5_THT": {
+        "children_assemblies": [],
+        "depth": 3,
+        "global_offset": [
+          -0.027107361163283494,
+          0.004989894855201769,
+          -0.004665197006928931
+        ],
+        "global_rotation": [
+          0.2588190451025136,
+          -0.96592582628907,
+          -1.5605397602888768e-16,
+          0.9659258262890704,
+          0.25881904510251386,
+          -8.121236765433896e-17,
+          2.873468630843074e-17,
+          -1.0723930924262046e-16,
+          0.9999999999999993
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Converter_DCDC_RECOM_R_78E_0_5_THT",
+        "parent_assembly": "Main_PCB"
+      },
+      "LD19_LiDAR": {
+        "children_assemblies": [],
+        "depth": 1,
+        "global_offset": [
+          -1.0036301348984483e-14,
+          -0.11488457921435037,
+          0.052898839370321304
+        ],
+        "global_rotation": [
+          1.0,
+          -1.251652203804345e-80,
+          1.2246467991473532e-16,
+          0.0,
+          1.0,
+          0.0,
+          -1.2246467991473532e-16,
+          1.5328318650347216e-96,
+          1.0
+        ],
+        "joints": [],
+        "links": [],
+        "name": "LD19_LiDAR",
+        "parent_assembly": "lidar_link"
+      },
+      "Main_PCB": {
+        "children_assemblies": [
+          "PinHeader_1x02_P2_54mm_Vertical",
+          "PinHeader_1x04_P2_54mm_Vertical",
+          "PinHeader_1x10_P2_54mm_Vertical",
+          "Converter_DCDC_RECOM_R_78E_0_5_THT"
+        ],
+        "depth": 2,
+        "global_offset": [
+          -0.00041433797718260743,
+          -0.17405957151073667,
+          -0.006260197006928927
+        ],
+        "global_rotation": [
+          -0.5000000000000062,
+          -0.8660254037844347,
+          -1.5605397602888768e-16,
+          0.8660254037844354,
+          -0.5000000000000066,
+          -8.121236765433896e-17,
+          -5.55111512312585e-17,
+          -9.614813431917773e-17,
+          0.9999999999999993
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Main_PCB",
+        "parent_assembly": "PCB_Housing"
+      },
+      "OmniWheelwithHub": {
+        "children_assemblies": [
+          "Omni_Wheel"
+        ],
+        "depth": 2,
+        "global_offset": [
+          0.20053245021312308,
+          -0.10798008701492316,
+          -0.01975610837599945
+        ],
+        "global_rotation": [
+          2.5319526883990667e-15,
+          -0.5000000000000258,
+          0.8660254037844245,
+          1.1720723751577594e-17,
+          -0.8660254037844238,
+          -0.5000000000000258,
+          1.0,
+          1.2171066341474672e-15,
+          -2.2595017840911958e-15
+        ],
+        "joints": [],
+        "links": [],
+        "name": "OmniWheelwithHub",
+        "parent_assembly": "Wheel_Hub"
+      },
+      "Omni_Wheel": {
+        "children_assemblies": [
+          "A1_ASM"
+        ],
+        "depth": 3,
+        "global_offset": [
+          0.26473439103709634,
+          -0.15284447192902106,
+          -0.02896199999999987
+        ],
+        "global_rotation": [
+          2.154530255887751e-15,
+          -0.5000000000000255,
+          0.8660254037844246,
+          -4.754606515804478e-16,
+          -0.8660254037844239,
+          -0.5000000000000256,
+          1.0,
+          6.064839706036307e-16,
+          -2.1762350572443094e-15
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Omni_Wheel",
+        "parent_assembly": "OmniWheelwithHub"
+      },
+      "PCB_Housing": {
+        "children_assemblies": [
+          "Main_PCB"
+        ],
+        "depth": 1,
+        "global_offset": [
+          -0.00041433797718260743,
+          -0.17405957151073667,
+          -0.006260197006928927
+        ],
+        "global_rotation": [
+          -0.5000000000000062,
+          -0.8660254037844347,
+          -1.5605397602888768e-16,
+          0.8660254037844354,
+          -0.5000000000000066,
+          -8.121236765433896e-17,
+          -5.55111512312585e-17,
+          -9.614813431917773e-17,
+          0.9999999999999993
+        ],
+        "joints": [],
+        "links": [],
+        "name": "PCB_Housing",
+        "parent_assembly": "base_link"
+      },
+      "PinHeader_1x02_P2_54mm_Vertical": {
+        "children_assemblies": [],
+        "depth": 3,
+        "global_offset": [
+          0.03935678668830204,
+          0.003054819894486265,
+          -0.004665197006928924
+        ],
+        "global_rotation": [
+          -0.5000000000000062,
+          -0.8660254037844347,
+          -1.5605397602888768e-16,
+          0.8660254037844354,
+          -0.5000000000000066,
+          -8.121236765433896e-17,
+          -5.55111512312585e-17,
+          -9.614813431917773e-17,
+          0.9999999999999993
+        ],
+        "joints": [],
+        "links": [],
+        "name": "PinHeader_1x02_P2_54mm_Vertical",
+        "parent_assembly": "Main_PCB"
+      },
+      "PinHeader_1x04_P2_54mm_Vertical": {
+        "children_assemblies": [],
+        "depth": 3,
+        "global_offset": [
+          -0.010673532213649955,
+          0.022089874151540095,
+          -0.004665197006928929
+        ],
+        "global_rotation": [
+          -0.5000000000000062,
+          -0.8660254037844347,
+          -1.5605397602888768e-16,
+          0.8660254037844354,
+          -0.5000000000000066,
+          -8.121236765433896e-17,
+          -5.55111512312585e-17,
+          -9.614813431917773e-17,
+          0.9999999999999993
+        ],
+        "joints": [],
+        "links": [],
+        "name": "PinHeader_1x04_P2_54mm_Vertical",
+        "parent_assembly": "Main_PCB"
+      },
+      "PinHeader_1x10_P2_54mm_Vertical": {
+        "children_assemblies": [],
+        "depth": 3,
+        "global_offset": [
+          -0.015578049416006863,
+          0.01348474713261787,
+          -0.004665197006928929
+        ],
+        "global_rotation": [
+          -0.5000000000000062,
+          -0.8660254037844347,
+          -1.5605397602888768e-16,
+          0.8660254037844354,
+          -0.5000000000000066,
+          -8.121236765433896e-17,
+          -5.55111512312585e-17,
+          -9.614813431917773e-17,
+          0.9999999999999993
+        ],
+        "joints": [],
+        "links": [],
+        "name": "PinHeader_1x10_P2_54mm_Vertical",
+        "parent_assembly": "Main_PCB"
+      },
+      "Wheel_Hub": {
+        "children_assemblies": [
+          "OmniWheelwithHub"
+        ],
+        "depth": 1,
+        "global_offset": [
+          0.23407573619779976,
+          -0.13514368930456017,
+          -0.028961999999999804
+        ],
+        "global_rotation": [
+          2.480160079203642e-15,
+          -0.5000000000000258,
+          0.8660254037844246,
+          -2.2475555600195507e-17,
+          -0.8660254037844238,
+          -0.5000000000000259,
+          1.0,
+          1.272617785378725e-15,
+          -2.2512935897560985e-15
+        ],
+        "joints": [],
+        "links": [],
+        "name": "Wheel_Hub",
+        "parent_assembly": "wheel_3_link"
+      },
+      "base_link": {
+        "children_assemblies": [
+          "PCB_Housing",
+          "Battery_Mount_Assembly"
+        ],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "base_link"
+        ],
+        "name": "base_link",
+        "parent_assembly": null
+      },
+      "lidar_link": {
+        "children_assemblies": [
+          "LD19_LiDAR"
+        ],
+        "depth": 0,
+        "global_offset": [
+          -1.0042791977019962e-14,
+          -0.0008845792143503672,
+          -0.00010116062967869155
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          1.2246467991473532e-16,
+          0.0,
+          1.0,
+          0.0,
+          -1.2246467991473532e-16,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "Lidar_Mounting_Plate"
+        ],
+        "name": "lidar_link",
+        "parent_assembly": null
+      },
+      "wheel_1_link": {
+        "children_assemblies": [
+          "Wheel_Hub"
+        ],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "wheel_1_link_Omni_Wheel"
+        ],
+        "name": "wheel_1_link",
+        "parent_assembly": null
+      },
+      "wheel_2_link": {
+        "children_assemblies": [
+          "Wheel_Hub"
+        ],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "wheel_2_link_Omni_Wheel"
+        ],
+        "name": "wheel_2_link",
+        "parent_assembly": null
+      },
+      "wheel_3_link": {
+        "children_assemblies": [
+          "Wheel_Hub"
+        ],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "wheel_3_link_Omni_Wheel"
+        ],
+        "name": "wheel_3_link",
+        "parent_assembly": null
+      }
+    },
+    "closing_joints": {},
+    "errors": [],
+    "joints": {
+      "base_link_to_lidar_link": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "Lidar_Mounting_Plate",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "base_link_to_lidar_link",
+        "origin_global": [
+          -1.6432692428157084e-14,
+          -0.25650070038324174,
+          0.04059768174064261
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          2.2091198393192572e-17,
+          8.027684682469488e-17,
+          2.094395102393194
+        ],
+        "origin_xyz": [
+          0.09967593728258888,
+          0.057373305340821704,
+          0.024944878747571536
+        ],
+        "parent_link": "base_link"
+      },
+      "wheel_1_to_base_link": {
+        "axis": [
+          0.8766558520547918,
+          0.010792424113144598,
+          -0.48099692373220987
+        ],
+        "child_link": "wheel_1_link_Omni_Wheel",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "wheel_1_to_base_link",
+        "origin_global": [
+          0.26924572857853474,
+          -0.1550157472095824,
+          -0.028341411019005277
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          -0.009687577942276641,
+          -0.48436407520979763,
+          -1.5663268535704014
+        ],
+        "origin_xyz": [
+          -0.00019231603927124955,
+          0.3106125301479076,
+          -0.028295371641754996
+        ],
+        "parent_link": "base_link"
+      },
+      "wheel_2_to_base_link": {
+        "axis": [
+          0.8766558520547924,
+          0.010792424113138273,
+          -0.4809969237322087
+        ],
+        "child_link": "wheel_2_link_Omni_Wheel",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "wheel_2_to_base_link",
+        "origin_global": [
+          -0.00038121641123805005,
+          0.3106866588942619,
+          -0.028833736901343273
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.03211275909123772,
+          -0.4976776855573496,
+          0.5081338788290058
+        ],
+        "origin_xyz": [
+          -0.2686889578338519,
+          -0.1557424568099467,
+          -0.028787697524092992
+        ],
+        "parent_link": "base_link"
+      },
+      "wheel_3_to_base_link": {
+        "axis": [
+          0.8766558520547921,
+          0.010792424113138183,
+          -0.48099692373220887
+        ],
+        "child_link": "wheel_3_link_Omni_Wheel",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "wheel_3_to_base_link",
+        "origin_global": [
+          -0.2688645121674265,
+          -0.15567091168446912,
+          -0.02971085207962176
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          -0.002170903557530098,
+          -0.5229986250429469,
+          2.619056454681802
+        ],
+        "origin_xyz": [
+          0.26943019341261776,
+          -0.15507702613721222,
+          -0.029664812702371497
+        ],
+        "parent_link": "base_link"
+      }
+    },
+    "links": {
+      "Lidar_Mounting_Plate": {
+        "area_m2": 0.06708088441870094,
+        "assembly": "lidar_link",
+        "bbox_max": [
+          0.05472768885632775,
+          0.09552180708027773,
+          0.0626
+        ],
+        "bbox_min": [
+          -0.05472768885632775,
+          -0.02699994600000001,
+          -0.009199997000000001
+        ],
+        "bbox_size": [
+          0.1094553777126555,
+          0.12252175308027774,
+          0.071799997
+        ],
+        "body_count": 1,
+        "clean_name": "Lidar_Mounting_Plate",
+        "collision": {
+          "mesh_path": "meshes/lidar_link/Lidar_Mounting_Plate_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": null,
+            "origin_rpy": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "origin_xyz": [
+              0.0,
+              0.03426093054013886,
+              0.0267000015
+            ],
+            "shape": "box",
+            "size": [
+              0.1094553777126555,
+              0.12252175308027774,
+              0.071799997
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.05472768885632775,
+          0.09552180708027773,
+          0.0626
+        ],
+        "collision_bbox_min": [
+          -0.05472768885632775,
+          -0.02699994600000001,
+          -0.009199997000000001
+        ],
+        "collision_bbox_size": [
+          0.1094553777126555,
+          0.12252175308027774,
+          0.071799997
+        ],
+        "collision_body_count": 9,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0001383663188128136,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          -0.0025578914321848245,
+          0.02013069807583503,
+          0.010134423065830539
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -1.0039730360022095e-14,
+          -0.11488457921435037,
+          0.024898839370321307
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0015227130359084452,
+          "ixy": 9.869876204822228e-05,
+          "ixz": 5.5710665445321735e-06,
+          "iyy": 0.0008842443986756783,
+          "iyz": 0.00012717634051274162,
+          "izz": 0.0019460426405199889
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 1.0861756026805867,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "lidar_link:1+LD19_LiDAR:1+LD19_up:1",
+          "lidar_link:1+LD19_LiDAR:1+LD19_bottom:1",
+          "lidar_link:1+LD19_LiDAR:1+LD19_middle:1",
+          "lidar_link:1+LD19_LiDAR:1+LD19_PCB:1",
+          "lidar_link:1+LD19_LiDAR:1+PA2X6_1:1",
+          "lidar_link:1+LD19_LiDAR:1+PA2X6_2:1",
+          "lidar_link:1+LD19_LiDAR:1+PA2X6_3:1",
+          "lidar_link:1+LD19_LiDAR:1+PA2X6_4:1",
+          "lidar_link:1+Lidar_Mounting_Plate:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/lidar_link/Lidar_Mounting_Plate_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/lidar_link/Lidar_Mounting_Plate.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "lidar_link:1+Lidar_Mounting_Plate:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 1",
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          1.2246467991473532e-16,
+          0.0,
+          1.0,
+          0.0,
+          -1.2246467991473532e-16,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "Lidar_Mounting_Plate",
+        "volume_m3": 0.0001383663188128136,
+        "wants_accurate_collision": false
+      },
+      "base_link": {
+        "area_m2": 0.874661066197745,
+        "assembly": "base_link",
+        "bbox_max": [
+          0.23882665857012936,
+          0.2706058897165713,
+          0.38415703937724993
+        ],
+        "bbox_min": [
+          -0.23846071221050588,
+          -0.2311182910972969,
+          -0.04566596062275016
+        ],
+        "bbox_size": [
+          0.4772873707806352,
+          0.5017241808138682,
+          0.42982300000000007
+        ],
+        "body_count": 1,
+        "clean_name": "Rear_Base_Plate",
+        "collision": {
+          "mesh_path": "meshes/base_link/base_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.49753033086628845,
+              -0.8520716949399422,
+              -0.16259580729605436,
+              0.867443792929237,
+              -0.4882351938631444,
+              -0.09574790641030667,
+              0.002199085405457396,
+              -0.188680211351355,
+              0.982036120449644
+            ],
+            "origin_rpy": [
+              -0.18981850965488448,
+              -0.002199087177915521,
+              2.0915471008755513
+            ],
+            "origin_xyz": [
+              0.11226877266543349,
+              0.06465354574919424,
+              -0.00037528095188834806
+            ],
+            "shape": "box",
+            "size": [
+              0.40008018648554966,
+              0.022927075239443553,
+              0.022731352799377668
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.23882665857012936,
+          0.2706058897165713,
+          0.38415703937724993
+        ],
+        "collision_bbox_min": [
+          -0.23846071221050588,
+          -0.2311182910972969,
+          -0.04566596062275016
+        ],
+        "collision_bbox_size": [
+          0.4772873707806352,
+          0.5017241808138682,
+          0.42982300000000007
+        ],
+        "collision_body_count": 26,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0014894381550060014,
+        "color_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "com_link_local": [
+          0.002108812735768759,
+          -0.0006467014547793803,
+          0.06886193808528804
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.00015122871705116836,
+          0.00012396728880689878,
+          -4.6039377250253196e-05
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.3371682711697141,
+          "ixy": 0.0024307862762794983,
+          "ixz": 0.001902273110221322,
+          "iyy": 0.33936771247767483,
+          "iyz": -0.0006434852464917724,
+          "izz": 0.2870069554421538
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 11.692089516797108,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "base_link:1+2020_400mm_Aluminum_Extrusion:1",
+          "base_link:1+Front_Left_Base_Plate:1",
+          "base_link:1+2020_400mm_Aluminum_Extrusion:5",
+          "base_link:1+Motor_Mount:2",
+          "base_link:1+2020_400mm_Aluminum_Extrusion:4",
+          "base_link:1+2020_400mm_Aluminum_Extrusion:7",
+          "base_link:1+2020_400mm_Aluminum_Extrusion:9",
+          "base_link:1+Motor_Mount:1",
+          "base_link:1+2020_400mm_Aluminum_Extrusion:8",
+          "base_link:1+Top_Plate:1",
+          "base_link:1+Motor_Mount:3",
+          "base_link:1+Front_Right_Base_Plate:1",
+          "base_link:1+PCB Housing:1+Main_PCB:1+PinHeader_1x02_P2.54mm_Vertical:1+PinHeader_1x02_P254mm_Vertical:1",
+          "base_link:1+PCB Housing:1+Main_PCB:1+PinHeader_1x04_P2.54mm_Vertical:1+PinHeader_1x04_P254mm_Vertical:1",
+          "base_link:1+PCB Housing:1+Main_PCB:1+PinHeader_1x10_P2.54mm_Vertical:1+PinHeader_1x10_P254mm_Vertical:1",
+          "base_link:1+PCB Housing:1+Main_PCB:1+Converter_DCDC_RECOM_R-78E-0.5_THT:1+Converter_DCDC_RECOM_R_78E_05_THT:1",
+          "base_link:1+PCB Housing:1+Main_PCB:1+KiwiDrive_PCB:1",
+          "base_link:1+PCB Housing:1+PCBoutline:1",
+          "base_link:1+PCB Housing:1+PCM_Mounting_Enclosure:1",
+          "base_link:1+Battery_Mount_Assembly:1+Battery_Mount_Front:1",
+          "base_link:1+Battery_Mount_Assembly:1+Battery_Mount_Back:1",
+          "base_link:1+JGA25-370DC_Motor:1",
+          "base_link:1+JGA25-370DC_Motor:3",
+          "base_link:1+2020_Aluminum_Extrusion_Mounting_Spacer:1",
+          "base_link:1+JGA25-370DC_Motor:2",
+          "base_link:1+Rear_Base_Plate:1"
+        ],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/base_link/base_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/base_link/base_link.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "base_link:1+Rear_Base_Plate:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 1",
+        "source_world_rotation": [
+          -0.49999999999999883,
+          0.8660254037844397,
+          4.218783309004035e-17,
+          -0.8660254037844395,
+          -0.49999999999999833,
+          2.2091198393192554e-17,
+          -4.5658803258534435e-17,
+          1.1553699035417997e-17,
+          0.9999999999999992
+        ],
+        "urdf_name": "base_link",
+        "volume_m3": 0.0014894381550060014,
+        "wants_accurate_collision": false
+      },
+      "wheel_1_link_Omni_Wheel": {
+        "area_m2": 0.20635468021314393,
+        "assembly": "wheel_1_link",
+        "bbox_max": [
+          0.0333168603695389,
+          -0.05218484905129891,
+          0.7468430166250513
+        ],
+        "bbox_min": [
+          -0.0555947675019714,
+          -0.18097604526660938,
+          0.6258062711821082
+        ],
+        "bbox_size": [
+          0.0889116278715103,
+          0.12879119621531046,
+          0.12103674544294307
+        ],
+        "body_count": 60,
+        "clean_name": "Omni_Wheel",
+        "collision": {
+          "mesh_path": "meshes/wheel_1_link/wheel_1_link_Omni_Wheel_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.41081200271458346,
+              -0.18027801487971298,
+              -0.8937188236669648,
+              0.4370114730860114,
+              0.899244820480832,
+              0.01948653970284512,
+              0.8001590284542364,
+              -0.39857068405670054,
+              0.44820412648005187
+            ],
+            "origin_rpy": [
+              -0.7268504632039933,
+              -0.927560312278428,
+              0.816290367129074
+            ],
+            "origin_xyz": [
+              -0.01852055740074704,
+              -0.11569443597775678,
+              0.6937470568340574
+            ],
+            "shape": "box",
+            "size": [
+              0.09398055300243768,
+              0.09440844735210702,
+              0.01014013817592857
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.0333168603695389,
+          -0.05218484905129891,
+          0.7468430166250513
+        ],
+        "collision_bbox_min": [
+          -0.0555947675019714,
+          -0.18097604526660938,
+          0.6258062711821082
+        ],
+        "collision_bbox_size": [
+          0.0889116278715103,
+          0.12879119621531046,
+          0.12103674544294307
+        ],
+        "collision_body_count": 123,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.0004004571524276766,
+        "color_rgb": [
+          0.37254901960784315,
+          0.4235294117647059,
+          0.5137254901960784
+        ],
+        "com_link_local": [
+          -0.015762143735019604,
+          -0.11629891645939515,
+          0.6921445438710231
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.09490948426970125,
+          -0.07330856953849127,
+          -0.6348705212365305
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0019784403457005807,
+          "ixy": 6.915708316814877e-06,
+          "ixz": -0.00035805881654673227,
+          "iyy": 0.0013220242179460637,
+          "iyz": -3.7520668287595006e-06,
+          "izz": 0.0015170233435983938
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 1.7977792015540177,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F2:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:2",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:2",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:3",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:3",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:4",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:4",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:5",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:5",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:6",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:6",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:7",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:7",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:8",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:8",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:9",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:9",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F2:2",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+F12:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F2:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:2",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:2",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:3",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:3",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:4",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:4",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:5",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:5",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:6",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:6",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:7",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:7",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:8",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:8",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:9",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:9",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F2:2",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+6mm_Mount:1",
+          "wheel_1_link:1+Wheel_Hub:2+OmniWheelwithHub:1+Back Spacer:1",
+          "wheel_1_link:1+Wheel_Hub:2+Motor_Hub:1",
+          "wheel_1_link:1+Omni_Wheel:1",
+          "wheel_1_link:1+4mm_Rigid_Flange_Coupling:2"
+        ],
+        "mesh_bake_offset": [
+          0.03325505576835558,
+          0.11652767887921978,
+          -0.7017677997668804
+        ],
+        "mesh_collision": "meshes/wheel_1_link/wheel_1_link_Omni_Wheel_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/wheel_1_link/wheel_1_link_Omni_Wheel.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_1_link:1+Omni_Wheel:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 1",
+        "source_world_rotation": [
+          -0.7683775947438123,
+          -0.500017664021668,
+          0.3994724115155296,
+          0.4390557755016725,
+          -0.8659727696232544,
+          -0.23941843761424342,
+          0.46564567848777627,
+          -0.008573093801879927,
+          0.8849297170783246
+        ],
+        "urdf_name": "wheel_1_link_Omni_Wheel",
+        "volume_m3": 0.0004004571524276766,
+        "wants_accurate_collision": false
+      },
+      "wheel_2_link_Omni_Wheel": {
+        "area_m2": 0.20635468021314385,
+        "assembly": "wheel_2_link",
+        "bbox_max": [
+          0.03373759258729103,
+          -0.05279667488914033,
+          0.7459734270631473
+        ],
+        "bbox_min": [
+          -0.05559476750196557,
+          -0.18030967429792757,
+          0.6267413130742349
+        ],
+        "bbox_size": [
+          0.0893323600892566,
+          0.12751299940878724,
+          0.11923211398891242
+        ],
+        "body_count": 60,
+        "clean_name": "Omni_Wheel",
+        "collision": {
+          "mesh_path": "meshes/wheel_2_link/wheel_2_link_Omni_Wheel_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.454909454098432,
+              -0.08723498887952347,
+              -0.8862547293453819,
+              0.14334041751853635,
+              0.9893869720081078,
+              -0.0238105927317994,
+              0.8789259998870659,
+              -0.11620445919076153,
+              0.46258578705652464
+            ],
+            "origin_rpy": [
+              -0.24611367188008612,
+              -1.0736057371069763,
+              0.3052486927302968
+            ],
+            "origin_xyz": [
+              -0.012060443942662702,
+              -0.11644442607988978,
+              0.6892005166026327
+            ],
+            "shape": "box",
+            "size": [
+              0.09346110230828497,
+              0.09453120041221436,
+              0.009914509309244535
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.03373759258729103,
+          -0.05279667488914033,
+          0.7459734270631473
+        ],
+        "collision_bbox_min": [
+          -0.05559476750196557,
+          -0.18030967429792757,
+          0.6267413130742349
+        ],
+        "collision_bbox_size": [
+          0.0893323600892566,
+          0.12751299940878724,
+          0.11923211398891242
+        ],
+        "collision_body_count": 123,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.00040045715242767666,
+        "color_rgb": [
+          0.37254901960784315,
+          0.4235294117647059,
+          0.5137254901960784
+        ],
+        "com_link_local": [
+          -0.015754118390099728,
+          -0.11629903453412983,
+          0.6921595532839447
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.1329992450719137,
+          -0.05369602323888249,
+          -0.6259916363925744
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0019770712092903203,
+          "ixy": 6.923102902452405e-06,
+          "ixz": -0.00035896386367361663,
+          "iyy": 0.0013220149300184059,
+          "iyz": -3.7612716133509517e-06,
+          "izz": 0.0015183828938899547
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 1.7977792015540162,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "wheel_2_link:1+Omni_Wheel:3",
+          "wheel_2_link:1+4mm_Rigid_Flange_Coupling:3",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F2:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:2",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:2",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:3",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:3",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:4",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:4",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:5",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:5",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:6",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:6",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:7",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:7",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:8",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:8",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:9",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:9",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F2:2",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+F12:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F2:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:2",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:2",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:3",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:3",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:4",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:4",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:5",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:5",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:6",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:6",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:7",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:7",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:8",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:8",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:9",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:9",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F2:2",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+6mm_Mount:1",
+          "wheel_2_link:1+Wheel_Hub:3+OmniWheelwithHub:1+Back Spacer:1",
+          "wheel_2_link:1+Wheel_Hub:3+Motor_Hub:1"
+        ],
+        "mesh_bake_offset": [
+          0.03325505576834964,
+          0.11652767887921817,
+          -0.7017677997668808
+        ],
+        "mesh_collision": "meshes/wheel_2_link/wheel_2_link_Omni_Wheel_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/wheel_2_link/wheel_2_link_Omni_Wheel.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_2_link:1+Omni_Wheel:3",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 1",
+        "source_world_rotation": [
+          -0.013588363717502494,
+          0.9996019417729242,
+          -0.02472477250193423,
+          -0.8785884978631919,
+          -0.00013058612084262248,
+          0.4775795581573386,
+          0.4773862249730072,
+          0.028212425472768074,
+          0.8782405429351184
+        ],
+        "urdf_name": "wheel_2_link_Omni_Wheel",
+        "volume_m3": 0.00040045715242767666,
+        "wants_accurate_collision": false
+      },
+      "wheel_3_link_Omni_Wheel": {
+        "area_m2": 0.20635468021314385,
+        "assembly": "wheel_3_link",
+        "bbox_max": [
+          0.03534429844174897,
+          -0.05228994664708092,
+          0.7458736071531159
+        ],
+        "bbox_min": [
+          -0.05574585560712453,
+          -0.1808609663317204,
+          0.6268884802382002
+        ],
+        "bbox_size": [
+          0.0910901540488735,
+          0.1285710196846395,
+          0.1189851269149157
+        ],
+        "body_count": 60,
+        "clean_name": "Omni_Wheel",
+        "collision": {
+          "mesh_path": "meshes/wheel_3_link/wheel_3_link_Omni_Wheel_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.454909454098432,
+              -0.08723498887952347,
+              -0.8862547293453819,
+              0.14334041751853635,
+              0.9893869720081078,
+              -0.0238105927317994,
+              0.8789259998870659,
+              -0.11620445919076153,
+              0.46258578705652464
+            ],
+            "origin_rpy": [
+              -0.24611367188008612,
+              -1.0736057371069763,
+              0.3052486927302968
+            ],
+            "origin_xyz": [
+              -0.012060443942662702,
+              -0.11644442607988978,
+              0.6892005166026327
+            ],
+            "shape": "box",
+            "size": [
+              0.09346110230828497,
+              0.09453120041221436,
+              0.009914509309244535
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.03534429844174897,
+          -0.05228994664708092,
+          0.7458736071531159
+        ],
+        "collision_bbox_min": [
+          -0.05574585560712453,
+          -0.1808609663317204,
+          0.6268884802382002
+        ],
+        "collision_bbox_size": [
+          0.0910901540488735,
+          0.1285710196846395,
+          0.1189851269149157
+        ],
+        "collision_body_count": 123,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.00040045715242767666,
+        "color_rgb": [
+          0.37254901960784315,
+          0.4235294117647059,
+          0.5137254901960784
+        ],
+        "com_link_local": [
+          -0.01573869292160961,
+          -0.11629889260006383,
+          0.6921871098876095
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.001943019939355084,
+          0.13394049526686153,
+          -0.6212775490688014
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.001974489094475918,
+          "ixy": 6.9073450405658864e-06,
+          "ixz": -0.0003605589701403451,
+          "iyy": 0.001322028546262308,
+          "iyz": -3.7623750231534297e-06,
+          "izz": 0.001520978918499879
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 1.7977792015540162,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "wheel_3_link:1+Omni_Wheel:2",
+          "wheel_3_link:1+4mm_Rigid_Flange_Coupling:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F2:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:2",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:2",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:3",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:3",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:4",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:4",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:5",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:5",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:6",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:6",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:7",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:7",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:8",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:8",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F5:9",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F6:9",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:1+F2:2",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+F12:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F2:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:2",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:2",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:3",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:3",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:4",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:4",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:5",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:5",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:6",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:6",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:7",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:7",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:8",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:8",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F5:9",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F6:9",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Omni Wheel:1+A1_ASM:2+F2:2",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+6mm_Mount:1",
+          "wheel_3_link:1+Wheel_Hub:1+OmniWheelwithHub:1+Back Spacer:1",
+          "wheel_3_link:1+Wheel_Hub:1+Motor_Hub:1"
+        ],
+        "mesh_bake_offset": [
+          0.03325505576835214,
+          0.11652767887921729,
+          -0.7017677997668818
+        ],
+        "mesh_collision": "meshes/wheel_3_link/wheel_3_link_Omni_Wheel_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/wheel_3_link/wheel_3_link_Omni_Wheel.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_3_link:1+Omni_Wheel:2",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "Rigid Group 1",
+        "source_world_rotation": [
+          0.7497990457219592,
+          -0.4999802814554303,
+          -0.43338332823285663,
+          0.4339596253643276,
+          0.8660347458941734,
+          -0.2483200806573233,
+          0.49948016435900106,
+          -0.0018807072486149532,
+          0.866323281663466
+        ],
+        "urdf_name": "wheel_3_link_Omni_Wheel",
+        "volume_m3": 0.00040045715242767666,
+        "wants_accurate_collision": false
+      }
+    },
+    "name": "Kiwi_Drive_Full_Assembly_Copy_Copy",
+    "root_link": "base_link",
+    "warnings": [
+      "Root link renamed: 'Rear_Base_Plate' \u2192 'base_link' (REP 120 convention). Consider renaming the component to 'base_link' in Fusion."
+    ]
+  }
+}

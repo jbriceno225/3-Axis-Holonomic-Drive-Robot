@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="wheel_1_link_macro">
+
+  <xacro:macro name="wheel_1_link" params="prefix">
+
+    <!-- Links -->
+    <link name="${prefix}wheel_1_link_Omni_Wheel">
+      <inertial>
+        <origin xyz="-0.000012 0.000023 0.019966" rpy="0 0 0"/>
+        <mass value="1.797779"/>
+        <inertia ixx="1.321954e-03" ixy="6.572010e-09" ixz="1.235774e-06"
+                 iyy="1.321788e-03" iyz="-2.278703e-06" izz="2.173746e-03"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.088814 0.603225 0.367959" rpy="3.119159 -1.068867 -1.590625"/>
+        <geometry>
+          <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_1_link/wheel_1_link_Omni_Wheel.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Steel"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.088814 0.603225 0.367959" rpy="3.119159 -1.068867 -1.590625"/>
+        <geometry>
+          <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_1_link/wheel_1_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+  </xacro:macro>
+
+</robot>

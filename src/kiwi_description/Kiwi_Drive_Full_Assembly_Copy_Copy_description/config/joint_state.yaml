@@ -1,0 +1,15 @@
+# Joint configuration for joint_state_publisher_gui
+
+joint_state_publisher:
+  ros__parameters:
+    # Joint names and default positions
+    zeros:
+      wheel_1_to_base_link: 0.0
+      wheel_2_to_base_link: 0.0
+      wheel_3_to_base_link: 0.0
+
+    # Joints to publish
+    source_list:
+      - wheel_1_to_base_link
+      - wheel_2_to_base_link
+      - wheel_3_to_base_link
