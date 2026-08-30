@@ -668,7 +668,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "C:/Users/javie/Downloads/testpcb/",
+      "plot": "../Fabrication/Gerbers/",
       "specctra_dsn": "",
       "vrml": ""
     },

@@ -123,7 +123,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "../Fabrication/Gerbers/")
+			(outputdirectory "../Fabrication/Drill_Files/")
 		)
 	)
 	(footprint "25GA_Motor_Encoder:25GA_Motor_Encoder_6Pin"
