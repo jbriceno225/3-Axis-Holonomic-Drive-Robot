@@ -118,7 +118,7 @@ unsigned long lastOdomTelemetryTime = 0;
 
 // Leave control headroom below the nominal 130 RPM no-load speed.
 // (after watching video this is important for autonomous control because it leaves headroom to allow the robot to speed up if detecting an error if needed to).
-const float MAX_TARGET_RPM = 100.0f;
+const float MAX_TARGET_RPM = 120.0f;
 
 // Velocity loop at 50 Hz. (20ms) (50x per sec).
 const uint32_t PID_PERIOD_US = 20000;
