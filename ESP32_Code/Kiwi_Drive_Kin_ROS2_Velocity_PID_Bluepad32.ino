@@ -79,11 +79,11 @@ const uint8_t M3_PWM_CHANNEL = 2;
 // Bluepad32 joystick values are approximately -512 to +512.
 const int AXIS_MAX = 512;
 
-const int LEFT_STICK_DEADZONE = 40;
+const int LEFT_STICK_DEADZONE = 80;
 const int RIGHT_STICK_DEADZONE = 30;
 
 // Maximum PWM the speed controller may command.
-const int MAX_PWM = 180;
+const int MAX_PWM = 240;
 
 // Smallest PWM that reliably moves the motors.
 const int MIN_PWM = 45;
@@ -131,7 +131,7 @@ const int ENCODER_DIRECTION[3] = {-1, -1, -1};
 // Starting PID gains.
 float velocityKp[3] = {0.80f, 0.80f, 0.80f};
 float velocityKi[3] = {0.30f, 0.30f, 0.30f};
-float velocityKd[3] = {0.00f, 0.00f, 0.00f};
+float velocityKd[3] = {0.05f, 0.05f, 0.05f};
 
 // RPM first order low-pass filter: 0 = no new data, 1 = no filtering. ( RPMfilt = alpha * RPMnew + (1 - alpha)RPMold )
 const float RPM_FILTER_ALPHA = 0.30f;
@@ -610,30 +610,33 @@ void driveKiwi(
   rotation *= ROTATION_SCALE;
 
   /*
-    Working Kiwi inverse kinematics:
+            FRONT OF ROBOT
+                ^
 
-                 Motor 1
-                    ^
-                   / \
-                  /   \
-          Motor 3 ----- Motor 2
+        Motor 1       Motor 3
+             \         /
+              \       /
+                Motor 2
+
+                  BACK
 
     x: positive = robot right
     y: positive = robot forward
   */
 
   float wheel1 =
-    y + rotation;
+    (-0.5f * x) +
+    (SIN_60 * y) +
+    rotation;
 
   float wheel2 =
-    (-0.5f * y) +
-    (SIN_60 * x) +
-    rotation;
+      x +
+      rotation;
 
   float wheel3 =
-    (-0.5f * y) -
-    (SIN_60 * x) +
-    rotation;
+      (-0.5f * x) -
+      (SIN_60 * y) +
+      rotation;
 
   // Preserve wheel ratios while limiting every command to +/-1.
   float largest = fabsf(wheel1);
