@@ -14,14 +14,14 @@
       <visual>
         <origin xyz="0.129426 -0.595834 0.367959" rpy="3.119159 -1.068867 1.618682"/>
         <geometry>
-          <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel.dae" scale="1 1 1"/>
+          <mesh filename="package://kiwi_drive_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel.dae" scale="1 1 1"/>
         </geometry>
         <material name="Steel"/>
       </visual>
       <collision>
         <origin xyz="0.129426 -0.595834 0.367959" rpy="3.119159 -1.068867 1.618682"/>
         <geometry>
-          <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
+          <mesh filename="package://kiwi_drive_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
         </geometry>
       </collision>
     </link>

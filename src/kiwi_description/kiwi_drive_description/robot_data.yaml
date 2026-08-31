@@ -3,7 +3,7 @@
 
 metadata:
   design_name: Kiwi_Drive_Full_Assembly_Copy_Copy
-  package_name: Kiwi_Drive_Full_Assembly_Copy_Copy_description
+  package_name: kiwi_drive_description
   exporter_version: '3.1.0'
   total_mass_kg: 18.1716
   link_count: 5

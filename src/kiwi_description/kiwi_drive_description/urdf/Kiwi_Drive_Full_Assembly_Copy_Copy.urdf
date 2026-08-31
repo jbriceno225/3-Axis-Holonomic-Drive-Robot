@@ -16,14 +16,14 @@
     <visual>
       <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 -2.094395"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/base_link/base_link.dae" scale="1 1 1"/>
+        <mesh filename="package://kiwi_drive_description/meshes/base_link/base_link.dae" scale="1 1 1"/>
       </geometry>
       <material name="Steel"/>
     </visual>
     <collision>
       <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 -2.094395"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/base_link/base_link_collision.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://kiwi_drive_description/meshes/base_link/base_link_collision.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -38,14 +38,14 @@
     <visual>
       <origin xyz="-0.088814 0.603225 0.367959" rpy="3.119159 -1.068867 -1.590625"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_1_link/wheel_1_link_Omni_Wheel.dae" scale="1 1 1"/>
+        <mesh filename="package://kiwi_drive_description/meshes/wheel_1_link/wheel_1_link_Omni_Wheel.dae" scale="1 1 1"/>
       </geometry>
       <material name="Steel"/>
     </visual>
     <collision>
       <origin xyz="-0.088814 0.603225 0.367959" rpy="3.119159 -1.068867 -1.590625"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_1_link/wheel_1_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://kiwi_drive_description/meshes/wheel_1_link/wheel_1_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -60,14 +60,14 @@
     <visual>
       <origin xyz="0.129426 -0.595834 0.367959" rpy="3.119159 -1.068867 1.618682"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel.dae" scale="1 1 1"/>
+        <mesh filename="package://kiwi_drive_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel.dae" scale="1 1 1"/>
       </geometry>
       <material name="Steel"/>
     </visual>
     <collision>
       <origin xyz="0.129426 -0.595834 0.367959" rpy="3.119159 -1.068867 1.618682"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://kiwi_drive_description/meshes/wheel_2_link/wheel_2_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -82,14 +82,14 @@
     <visual>
       <origin xyz="-0.089816 0.603077 0.367959" rpy="3.119159 -1.068867 -1.588963"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_3_link/wheel_3_link_Omni_Wheel.dae" scale="1 1 1"/>
+        <mesh filename="package://kiwi_drive_description/meshes/wheel_3_link/wheel_3_link_Omni_Wheel.dae" scale="1 1 1"/>
       </geometry>
       <material name="Steel"/>
     </visual>
     <collision>
       <origin xyz="-0.089816 0.603077 0.367959" rpy="3.119159 -1.068867 -1.588963"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/wheel_3_link/wheel_3_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://kiwi_drive_description/meshes/wheel_3_link/wheel_3_link_Omni_Wheel_collision.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -104,14 +104,14 @@
     <visual>
       <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/lidar_link/Lidar_Mounting_Plate.dae" scale="1 1 1"/>
+        <mesh filename="package://kiwi_drive_description/meshes/lidar_link/Lidar_Mounting_Plate.dae" scale="1 1 1"/>
       </geometry>
       <material name="Steel"/>
     </visual>
     <collision>
       <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
       <geometry>
-        <mesh filename="package://Kiwi_Drive_Full_Assembly_Copy_Copy_description/meshes/lidar_link/Lidar_Mounting_Plate_collision.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://kiwi_drive_description/meshes/lidar_link/Lidar_Mounting_Plate_collision.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>

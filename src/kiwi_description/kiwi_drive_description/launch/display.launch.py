@@ -1,9 +1,9 @@
 """
-Launch file for kiwi_drive_description.
+Launch file for Kiwi_Drive_Full_Assembly_Copy_Copy.
 
 Usage:
     ros2 launch kiwi_drive_description display.launch.py
-    ros2 launch kiwi_drive_description display.launch.py namespace:=robot1
+ros2 launch kiwi_drive_description display.launch.py namespace:=robot1
 """
 
 import os

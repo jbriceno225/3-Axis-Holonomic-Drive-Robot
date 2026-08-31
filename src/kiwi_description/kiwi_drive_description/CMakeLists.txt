@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(Kiwi_Drive_Full_Assembly_Copy_Copy_description)
+project(kiwi_drive_description)
 
 find_package(ament_cmake REQUIRED)
 

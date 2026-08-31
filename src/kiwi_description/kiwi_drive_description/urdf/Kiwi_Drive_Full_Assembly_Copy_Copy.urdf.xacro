@@ -7,12 +7,11 @@
   </material>
 
   <!-- Assembly includes -->
-  <xacro:include filename="$(find Kiwi_Drive_Full_Assembly_Copy_Copy_description)/urdf/assemblies/base_link.urdf.xacro"/>
-  <xacro:include filename="$(find Kiwi_Drive_Full_Assembly_Copy_Copy_description)/urdf/assemblies/wheel_1_link.urdf.xacro"/>
-  <xacro:include filename="$(find Kiwi_Drive_Full_Assembly_Copy_Copy_description)/urdf/assemblies/wheel_2_link.urdf.xacro"/>
-  <xacro:include filename="$(find Kiwi_Drive_Full_Assembly_Copy_Copy_description)/urdf/assemblies/wheel_3_link.urdf.xacro"/>
-  <xacro:include filename="$(find Kiwi_Drive_Full_Assembly_Copy_Copy_description)/urdf/assemblies/lidar_link.urdf.xacro"/>
-
+  <xacro:include filename="$(find kiwi_drive_description)/urdf/assemblies/base_link.urdf.xacro"/>
+  <xacro:include filename="$(find kiwi_drive_description)/urdf/assemblies/wheel_1_link.urdf.xacro"/>
+  <xacro:include filename="$(find kiwi_drive_description)/urdf/assemblies/wheel_2_link.urdf.xacro"/>
+  <xacro:include filename="$(find kiwi_drive_description)/urdf/assemblies/wheel_3_link.urdf.xacro"/>
+  <xacro:include filename="$(find kiwi_drive_description)/urdf/assemblies/lidar_link.urdf.xacro"/>
   <!-- Instantiate assemblies -->
   <xacro:base_link prefix=""/>
   <xacro:wheel_1_link prefix=""/>

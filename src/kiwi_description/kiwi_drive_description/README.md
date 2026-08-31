@@ -145,21 +145,21 @@ base_link [BAKE]
 
 ```bash
 # 1. Copy package to your ROS 2 workspace
-cp -r Kiwi_Drive_Full_Assembly_Copy_Copy_description ~/ros2_ws/src/
+cp -r kiwi_drive_description ~/ros2_ws/src/
 
 # 2. Build
 cd ~/ros2_ws
-colcon build --packages-select Kiwi_Drive_Full_Assembly_Copy_Copy_description
+colcon build --packages-select kiwi_drive_description
 source install/setup.bash
 
 # 3. Visualize in RViz2
-ros2 launch Kiwi_Drive_Full_Assembly_Copy_Copy_description display.launch.py
+ros2 launch kiwi_drive_description display.launch.py
 
 # 4. Validate URDF structure
-check_urdf install/Kiwi_Drive_Full_Assembly_Copy_Copy_description/share/Kiwi_Drive_Full_Assembly_Copy_Copy_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf
+check_urdf install/kiwi_drive_description/share/kiwi_drive_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf
 
 # 5. Print kinematic tree
-urdf_to_graphviz install/Kiwi_Drive_Full_Assembly_Copy_Copy_description/share/Kiwi_Drive_Full_Assembly_Copy_Copy_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf
+urdf_to_graphviz install/kiwi_drive_description/share/kiwi_drive_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf
 ```
 
 **Joint control**: The launch file includes `joint_state_publisher_gui` —

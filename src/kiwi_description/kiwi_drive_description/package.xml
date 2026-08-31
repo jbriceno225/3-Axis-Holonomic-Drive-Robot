@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>Kiwi_Drive_Full_Assembly_Copy_Copy_description</name>
+  <name>kiwi_drive_description</name>
   <version>0.1.0</version>
-  <description>Robot description for Kiwi_Drive_Full_Assembly_Copy_Copy, generated from Fusion 360</description>
+  <description>Robot description package for the 3-axis Kiwi drive robot.</description>
 
   <maintainer email="todo@todo.com">TODO</maintainer>
   <license>TODO</license>
