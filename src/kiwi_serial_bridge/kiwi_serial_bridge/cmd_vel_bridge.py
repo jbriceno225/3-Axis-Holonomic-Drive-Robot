@@ -353,6 +353,7 @@ class CmdVelSerialBridge(Node):
                     line.startswith("WARN")
                     or line.startswith("ERR")
                     or line.startswith("MODE")
+                    or line.startswith("ACK")
                 ):
                     self.get_logger().info(line)
 
