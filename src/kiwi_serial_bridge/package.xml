@@ -4,25 +4,26 @@
 
 <package format="3">
   <name>kiwi_serial_bridge</name>
-  <version>0.0.0</version>
-  <description>ROS 2 serial bridge for Kiwi drive ESP32</description>
+  <version>0.1.0</version>
+  <description>ROS 2 stamped velocity and odometry bridge for KiwiDrive.</description>
 
-  <maintainer email="jbriceno225@gmail.com">
-    jbriceno225
-  </maintainer>
+  <maintainer email="jbriceno225@gmail.com">Javier Briceno</maintainer>
 
-  <license>Apache-2.0</license>
+  <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>python3-serial</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_mypy</test_depend>
   <test_depend>ament_pep257</test_depend>
+  <test_depend>ament_xmllint</test_depend>
   <test_depend>python3-pytest</test_depend>
 
   <export>

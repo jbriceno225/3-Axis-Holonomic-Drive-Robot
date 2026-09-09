@@ -4,7 +4,7 @@ package_name = "kiwi_serial_bridge"
 
 setup(
     name=package_name,
-    version="0.0.0",
+    version="0.1.0",
     packages=find_packages(exclude=["test"]),
     data_files=[
         (
@@ -21,10 +21,10 @@ setup(
         "pyserial",
     ],
     zip_safe=True,
-    maintainer="jbriceno225",
-    maintainer_email="jbriceno225@example.com",
-    description="ROS 2 serial bridge for Kiwi drive ESP32",
-    license="Apache-2.0",
+    maintainer="Javier Briceno",
+    maintainer_email="jbriceno225@gmail.com",
+    description="ROS 2 stamped velocity and odometry bridge for KiwiDrive",
+    license="MIT",
     entry_points={
         "console_scripts": [
             "cmd_vel_bridge = kiwi_serial_bridge.cmd_vel_bridge:main",
