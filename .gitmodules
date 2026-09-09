@@ -9,3 +9,7 @@
 [submodule "src/slam_toolbox"]
     path = src/slam_toolbox
     url = https://github.com/SteveMacenski/slam_toolbox.git
+
+[submodule "src/m-explore-ros2"]
+    path = src/m-explore-ros2
+    url = https://github.com/robo-friends/m-explore-ros2.git
