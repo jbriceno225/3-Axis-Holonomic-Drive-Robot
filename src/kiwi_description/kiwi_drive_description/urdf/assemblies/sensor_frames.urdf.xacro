@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="kiwi_sensor_frames">
+
+  <!--
+    Hand-maintained logical sensor frames, separate from exported CAD links.
+    robot_state_publisher is the sole TF owner for these fixed joints.
+  -->
+  <xacro:macro
+    name="kiwi_sensor_frames"
+    params="prefix parent laser_x laser_y laser_z laser_yaw">
+    <link name="${prefix}base_laser"/>
+    <joint name="${prefix}base_link_to_base_laser" type="fixed">
+      <parent link="${prefix}${parent}"/>
+      <child link="${prefix}base_laser"/>
+      <origin
+        xyz="${laser_x} ${laser_y} ${laser_z}"
+        rpy="0 0 ${laser_yaw}"/>
+    </joint>
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,33 @@
+cmd_vel_serial_bridge:
+  ros__parameters:
+    # Stable udev symlink expected for the ESP32 controller.
+    serial_port: /dev/kiwi_esp32
+    baud_rate: 115200
+    serial_read_timeout: 0.02
+    serial_write_timeout: 0.10
+    serial_startup_delay: 2.0
+    serial_read_rate_hz: 100.0
+
+    # Relative names allow normal ROS namespace and remapping behavior.
+    cmd_vel_topic: cmd_vel
+    odom_topic: odom
+
+    max_linear_speed: 0.30
+    max_angular_speed: 1.00
+    wheel_radius: 0.050
+    wheel_distance: 0.2921
+
+    command_rate_hz: 20.0
+    ros_command_timeout: 0.25
+    max_odom_dt: 0.50
+
+    odom_frame: odom
+    base_frame: base_link
+    command_sideways_direction: 1.0
+    command_forward_direction: 1.0
+    command_rotation_direction: 1.0
+    odom_y_direction: -1.0
+    odom_yaw_direction: 1.0
+
+    pose_covariance_diagonal: [0.05, 0.05, 99999.0, 99999.0, 99999.0, 0.10]
+    twist_covariance_diagonal: [0.05, 0.05, 99999.0, 99999.0, 99999.0, 0.10]
