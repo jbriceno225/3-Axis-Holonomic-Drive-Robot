@@ -155,15 +155,19 @@ source install/setup.bash
 # 3. Visualize in RViz2
 ros2 launch kiwi_drive_description display.launch.py
 
-# 4. Validate URDF structure
-check_urdf install/kiwi_drive_description/share/kiwi_drive_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf
+# 4. Expand and validate the current Xacro
+xacro \
+  install/kiwi_drive_description/share/kiwi_drive_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf.xacro \
+  use_mock_hardware:=true > /tmp/kiwi_drive.urdf
+check_urdf /tmp/kiwi_drive.urdf
 
 # 5. Print kinematic tree
-urdf_to_graphviz install/kiwi_drive_description/share/kiwi_drive_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf
+urdf_to_graphviz /tmp/kiwi_drive.urdf
 ```
 
-**Joint control**: The launch file includes `joint_state_publisher_gui` —
-use the sliders to move revolute/prismatic joints in RViz2.
+**Joint control**: This visualization launch starts mock `ros2_control`, a
+joint-state broadcaster, and a forward velocity controller. It does not
+control the physical ESP32.
 
 **Topic inspection**:
 ```bash
@@ -179,7 +183,7 @@ ros2 param get /robot_state_publisher robot_description
 | Path | Description |
 |------|-------------|
 | `urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf.xacro` | Top-level xacro (entry point) |
-| `urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf` | Flat URDF (for validation) |
+| `urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf` | Generated flat snapshot; expand the Xacro for current validation |
 | `urdf/assemblies/` | Per-assembly xacro macros |
 | `meshes/` | Visual (OBJ) and collision (STL) meshes |
 | `launch/display.launch.py` | Launch robot_state_publisher, RViz, and generated controllers |

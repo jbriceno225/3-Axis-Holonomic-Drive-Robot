@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible software, firmware, CAD, or PCB defect
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stop using the robot if the issue could cause unsafe motion. Report
+        sensitive safety/security details using SECURITY.md.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - ROS 2 / bringup
+        - Serial bridge
+        - ESP32 firmware
+        - CAD / mechanical
+        - PCB / electrical
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Include the exact commands and smallest repeatable sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and hardware
+      description: Commit, OS/ROS, firmware/tool versions, board revision, and test setup.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or evidence
+      description: Paste relevant text or link a sanitized log, rosbag, image, or video.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: I stopped testing if motion or electrical behavior was unsafe.
+          required: true
+        - label: I removed secrets and personal device identifiers.
+          required: true

@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a scoped improvement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Problem or need
+      description: Describe the use case before proposing an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - ROS 2 / autonomy
+        - Serial bridge
+        - ESP32 firmware
+        - CAD / mechanical
+        - PCB / electrical
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation and safety plan
+      description: State how the change can be tested without overstating hardware results.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

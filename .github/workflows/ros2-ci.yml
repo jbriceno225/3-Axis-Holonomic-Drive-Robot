@@ -1,0 +1,92 @@
+name: ROS 2 Lyrical CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-lint-unit:
+    runs-on: ubuntu-latest
+    container:
+      image: ros:lyrical-ros-base-resolute
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Check out repository and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Verify pinned exploration dependency
+        run: |
+          test -f src/m-explore-ros2/explore/package.xml
+          test "$(git -C src/m-explore-ros2 rev-parse HEAD)" = \
+            "326cf8a0b487c34246bb8f3326afbcd69576dc60"
+
+      - name: Apply pinned vendor patches
+        run: bash scripts/apply_vendor_patches.sh
+
+      - name: Install workspace dependencies
+        run: |
+          source /opt/ros/lyrical/setup.bash
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            liburdfdom-tools \
+            python3-pytest
+          if [[ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]]; then
+            rosdep init
+          fi
+          rosdep update --rosdistro lyrical
+          rosdep install \
+            --from-paths src \
+            --ignore-src \
+            --rosdistro lyrical \
+            --reinstall \
+            -r \
+            -y
+
+      - name: Check Python syntax
+        run: |
+          python3 -m compileall -q \
+            src/kiwi_serial_bridge/kiwi_serial_bridge \
+            src/kiwi_bringup/launch \
+            src/kiwi_description/kiwi_drive_description/launch
+
+      - name: Build ROS workspace
+        run: |
+          source /opt/ros/lyrical/setup.bash
+          colcon build \
+            --event-handlers console_direct+ \
+            --packages-up-to kiwi_bringup
+
+      - name: Smoke-test installed ROS resources
+        run: |
+          source /opt/ros/lyrical/setup.bash
+          source install/setup.bash
+          ros2 pkg prefix explore_lite
+          xacro \
+            install/kiwi_drive_description/share/kiwi_drive_description/urdf/Kiwi_Drive_Full_Assembly_Copy_Copy.urdf.xacro \
+            use_mock_hardware:=true > /tmp/kiwi_drive.urdf
+          check_urdf /tmp/kiwi_drive.urdf
+          ros2 launch kiwi_bringup hardware.launch.py --show-args
+          ros2 launch kiwi_bringup slam.launch.py --show-args
+          ros2 launch kiwi_bringup navigation.launch.py --show-args
+          ros2 launch kiwi_bringup exploration.launch.py --show-args
+
+      - name: Run first-party lint and unit tests
+        run: |
+          source /opt/ros/lyrical/setup.bash
+          source install/setup.bash
+          colcon test \
+            --event-handlers console_direct+ \
+            --packages-select \
+              kiwi_serial_bridge \
+              kiwi_drive_description \
+              kiwi_bringup
+          colcon test-result --verbose
