@@ -46,10 +46,15 @@
   <!-- update the include + macro call above, and adjust -->
   <!-- parent/child link names in the mount joint below. -->
 
+  <!--
+    CAD mount poses are yawed +90 deg about Z so Fusion chassis front
+    (lidar plate) lands on ROS +X. Do not change base_laser; that optical
+    frame is already REP-103.
+  -->
   <joint name="wheel_1_to_base_link" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_1_link_Omni_Wheel"/>
-    <origin xyz="0.269094 -0.155140 -0.028295" rpy="-1.588336 0.031105 1.057255"/>
+    <origin xyz="0.155140 0.269094 -0.028295" rpy="-1.588336 0.031105 2.628051"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
@@ -57,7 +62,7 @@
   <joint name="wheel_2_to_base_link" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_2_link_Omni_Wheel"/>
-    <origin xyz="-0.000532 0.310563 -0.028788" rpy="1.574419 -0.000039 0.010768"/>
+    <origin xyz="-0.310563 -0.000532 -0.028788" rpy="1.574419 -0.000039 1.581564"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
@@ -65,7 +70,7 @@
   <joint name="wheel_3_to_base_link" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_3_link_Omni_Wheel"/>
-    <origin xyz="-0.269016 -0.155795 -0.029665" rpy="-1.549628 0.035717 -1.035628"/>
+    <origin xyz="0.155795 -0.269016 -0.029665" rpy="-1.549628 0.035717 0.535168"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
@@ -73,7 +78,7 @@
   <joint name="base_link_to_lidar_link" type="fixed">
     <parent link="base_link"/>
     <child link="Lidar_Mounting_Plate"/>
-    <origin xyz="-0.000151 -0.115009 0.024945" rpy="0.000000 0.000000 0.000000"/>
+    <origin xyz="0.115009 -0.000151 0.024945" rpy="0.000000 0.000000 1.570796"/>
   </joint>
 
   <xacro:if value="$(arg use_mock_hardware)">

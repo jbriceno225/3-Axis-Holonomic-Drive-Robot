@@ -123,6 +123,17 @@ def generate_launch_description():
             }],
         ),
         Node(
+            package="joint_state_publisher",
+            executable="joint_state_publisher",
+            name="joint_state_publisher",
+            output="screen",
+            parameters=[{
+                "robot_description": robot_description,
+                "rate": 20.0,
+                "use_sim_time": ParameterValue(use_sim_time, value_type=bool),
+            }],
+        ),
+        Node(
             package="kiwi_serial_bridge",
             executable="cmd_vel_bridge",
             name="cmd_vel_serial_bridge",
