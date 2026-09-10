@@ -15,8 +15,6 @@ sudo apt-get install -y \
   python3-colcon-common-extensions \
   python3-rosdep \
   python3-serial \
-  "ros-${ROS_DISTRO}-navigation2" \
-  "ros-${ROS_DISTRO}-nav2-bringup" \
   "ros-${ROS_DISTRO}-robot-state-publisher" \
   "ros-${ROS_DISTRO}-rviz2" \
   "ros-${ROS_DISTRO}-slam-toolbox" \
@@ -29,6 +27,8 @@ rosdep update
 
 bash "${ROOT_DIR}/scripts/apply_vendor_patches.sh"
 
+# Navigation2 is pinned in src/navigation2 because its Lyrical metapackages
+# are not currently published in the Ubuntu Resolute ARM64 apt repository.
 # shellcheck disable=SC1090
 source "/opt/ros/${ROS_DISTRO}/setup.bash"
 rosdep install \
@@ -40,7 +40,9 @@ rosdep install \
   -y
 
 cd "${ROOT_DIR}"
-colcon build --symlink-install
+colcon build \
+  --symlink-install \
+  --packages-up-to kiwi_bringup
 
 printf '\nBootstrap complete. In each new terminal run:\n'
 printf '  source /opt/ros/%s/setup.bash\n' "${ROS_DISTRO}"

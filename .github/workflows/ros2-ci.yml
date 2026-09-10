@@ -23,11 +23,14 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Verify pinned exploration dependency
+      - name: Verify pinned source dependencies
         run: |
           test -f src/m-explore-ros2/explore/package.xml
           test "$(git -C src/m-explore-ros2 rev-parse HEAD)" = \
             "326cf8a0b487c34246bb8f3326afbcd69576dc60"
+          test -f src/navigation2/nav2_bringup/package.xml
+          test "$(git -C src/navigation2 rev-parse HEAD)" = \
+            "b754704d408f715487e9ec4bd695e4fbe423fede"
 
       - name: Apply pinned vendor patches
         run: bash scripts/apply_vendor_patches.sh

@@ -23,6 +23,10 @@ pinned vendor submodules, and builds the workspace. Do not edit third-party
 submodule code directly unless the change is intentionally captured as a
 patch and its upstream license/header remains intact.
 
+Navigation2 is pinned under `src/navigation2` and built from source because
+its Lyrical metapackages are not currently available from the Ubuntu Resolute
+ARM64 package repository used by the Raspberry Pi.
+
 GitHub Actions uses the official
 `ros:lyrical-ros-base-resolute` container. It checks an amd64 clean software
 build, Python syntax, package lint, and unit tests; it cannot compile the
