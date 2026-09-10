@@ -173,6 +173,20 @@ def generate_launch_description():
             default_value="8.0",
             description="Grace period for SLAM and Nav2 lifecycle startup.",
         ),
+        DeclareLaunchArgument(
+            "use_rviz",
+            default_value="true",
+            description="Start RViz with LaserScan and base_link/base_laser axes.",
+        ),
+        DeclareLaunchArgument(
+            "rviz_config",
+            default_value=PathJoinSubstitution([
+                FindPackageShare("kiwi_bringup"),
+                "rviz",
+                "kiwi.rviz",
+            ]),
+            description="RViz config file for physical hardware and mapping.",
+        ),
         OpaqueFunction(function=_validate_composition),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(hardware_launch),
@@ -186,6 +200,8 @@ def generate_launch_description():
                 "laser_y": LaunchConfiguration("laser_y"),
                 "laser_z": LaunchConfiguration("laser_z"),
                 "laser_yaw": LaunchConfiguration("laser_yaw"),
+                "use_rviz": LaunchConfiguration("use_rviz"),
+                "rviz_config": LaunchConfiguration("rviz_config"),
             }.items(),
         ),
         IncludeLaunchDescription(

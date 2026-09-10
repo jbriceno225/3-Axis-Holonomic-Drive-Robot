@@ -2,6 +2,7 @@
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
+from launch.conditions import IfCondition
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
@@ -28,6 +29,13 @@ def generate_launch_description():
     laser_z = LaunchConfiguration("laser_z")
     laser_yaw = LaunchConfiguration("laser_yaw")
     use_sim_time = LaunchConfiguration("use_sim_time")
+    use_rviz = LaunchConfiguration("use_rviz")
+    rviz_config = LaunchConfiguration("rviz_config")
+    default_rviz_config = PathJoinSubstitution([
+        FindPackageShare("kiwi_bringup"),
+        "rviz",
+        "kiwi.rviz",
+    ])
 
     robot_description = ParameterValue(
         Command([
@@ -94,6 +102,16 @@ def generate_launch_description():
             default_value="false",
             description="Use simulated time (normally false on hardware).",
         ),
+        DeclareLaunchArgument(
+            "use_rviz",
+            default_value="true",
+            description="Start RViz with LaserScan and base_link/base_laser axes.",
+        ),
+        DeclareLaunchArgument(
+            "rviz_config",
+            default_value=default_rviz_config,
+            description="RViz config file for physical hardware and mapping.",
+        ),
         Node(
             package="robot_state_publisher",
             executable="robot_state_publisher",
@@ -132,6 +150,17 @@ def generate_launch_description():
                 "angle_crop_max": 225.0,
                 "range_min": 0.02,
                 "range_max": 12.0,
+                "use_sim_time": ParameterValue(use_sim_time, value_type=bool),
+            }],
+        ),
+        Node(
+            package="rviz2",
+            executable="rviz2",
+            name="rviz2",
+            output="screen",
+            condition=IfCondition(use_rviz),
+            arguments=["-d", rviz_config],
+            parameters=[{
                 "use_sim_time": ParameterValue(use_sim_time, value_type=bool),
             }],
         ),

@@ -16,8 +16,9 @@ ros2 launch kiwi_bringup slam.launch.py
 ros2 launch kiwi_bringup exploration.launch.py
 ```
 
-`hardware.launch.py` starts the robot description, ESP32 serial bridge, and
-LD19 driver. It intentionally disables the description package's mock
+`hardware.launch.py` starts the robot description, ESP32 serial bridge, LD19
+driver, and RViz with `/scan` plus `base_link` / `base_laser` axes (length
+0.1 m, radius 0.01 m). Use `use_rviz:=false` on a headless SSH session. It intentionally disables the description package's mock
 `ros2_control` system and does not include the vendor LD19 launch file. The
 `base_link` to `base_laser` transform is published only by
 `robot_state_publisher` from the robot URDF.

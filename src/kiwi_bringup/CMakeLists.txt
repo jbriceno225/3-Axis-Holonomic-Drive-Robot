@@ -4,7 +4,7 @@ project(kiwi_bringup)
 find_package(ament_cmake REQUIRED)
 
 install(
-  DIRECTORY config docs launch
+  DIRECTORY config docs launch rviz
   DESTINATION share/${PROJECT_NAME}
   PATTERN "__pycache__" EXCLUDE
   PATTERN "*.pyc" EXCLUDE
