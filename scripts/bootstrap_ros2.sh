@@ -30,7 +30,9 @@ bash "${ROOT_DIR}/scripts/apply_vendor_patches.sh"
 # Navigation2 is pinned in src/navigation2 because its Lyrical metapackages
 # are not currently published in the Ubuntu Resolute ARM64 apt repository.
 # shellcheck disable=SC1090
+set +u
 source "/opt/ros/${ROS_DISTRO}/setup.bash"
+set -u
 rosdep install \
   --from-paths "${ROOT_DIR}/src" \
   --ignore-src \
