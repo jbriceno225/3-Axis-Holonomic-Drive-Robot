@@ -25,7 +25,10 @@ patch and its upstream license/header remains intact.
 
 Navigation2 is pinned under `src/navigation2` and built from source because
 its Lyrical metapackages are not currently available from the Ubuntu Resolute
-ARM64 package repository used by the Raspberry Pi.
+ARM64 package repository used by the Raspberry Pi. `slam_toolbox` is taken
+from apt instead of the workspace submodule so the Pi does not compile it.
+The bootstrap compiles remaining C++ packages one at a time and creates a
+temporary 4 GiB swapfile if swap is below 2 GiB.
 
 GitHub Actions uses the official
 `ros:lyrical-ros-base-resolute` container. It checks an amd64 clean software

@@ -42,9 +42,35 @@ rosdep install \
   -y
 
 cd "${ROOT_DIR}"
+
+# Pi RAM cannot compile slam_toolbox + Nav2 in parallel. Use apt slam_toolbox
+# and compile remaining C++ packages one at a time.
+swap_kb="$(awk '/SwapTotal:/ { print $2 }' /proc/meminfo)"
+swap_kb="${swap_kb:-0}"
+if [[ "${swap_kb}" -lt 2000000 ]]; then
+  printf 'Low swap (%s kB). Creating a temporary 4 GiB swapfile...\n' "${swap_kb}"
+  if [[ ! -f /swapfile ]]; then
+    sudo fallocate -l 4G /swapfile || sudo dd if=/dev/zero of=/swapfile bs=1M count=4096 status=progress
+    sudo chmod 600 /swapfile
+    sudo mkswap /swapfile
+  fi
+  sudo swapon /swapfile || true
+fi
+
+export MAKEFLAGS="${MAKEFLAGS:--j1}"
 colcon build \
   --symlink-install \
-  --packages-up-to kiwi_bringup
+  --executor sequential \
+  --parallel-workers 1 \
+  --cmake-args -DBUILD_TESTING=OFF \
+  --packages-up-to kiwi_bringup \
+  --packages-skip \
+    slam_toolbox \
+    nav2_bringup \
+    nav2_system_tests \
+    nav2_minimal_tb3_sim \
+    nav2_minimal_tb4_sim \
+    nav2_minimal_tb4_description
 
 printf '\nBootstrap complete. In each new terminal run:\n'
 printf '  source /opt/ros/%s/setup.bash\n' "${ROS_DISTRO}"
