@@ -9,6 +9,12 @@ ls -l /dev/kiwi_esp32 /dev/kiwi_lidar
 ls -l /dev/serial/by-id/
 ```
 
+ESP32 DevKits and LD19 dongles both often use Silicon Labs CP2102 chips with
+the same USB serial (`0001`). Identify the ESP32 by sending `PING` at 115200
+and looking for `ACK,PONG`; do not assume `/dev/ttyUSB0` is the controller.
+The installer then binds names to USB port paths, so keep each cable in the
+same Pi socket.
+
 Reinstall the udev rules with the ESP32 port first and LiDAR port second, then
 reconnect devices and confirm group permissions:
 

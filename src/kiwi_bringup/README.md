@@ -95,9 +95,11 @@ The defaults expect persistent udev symlinks:
 - `/dev/kiwi_esp32` for the ESP32
 - `/dev/kiwi_lidar` for the LD19
 
-Create host-specific udev rules before using these launch files. The LiDAR port
-can be overridden with `laser_port:=...`; the controller port is configured in
-`config/bridge_params.yaml`.
+Create host-specific udev rules before using these launch files. If both USB
+adapters report the same vendor, product, and serial, the installer matches
+`ENV{ID_PATH}` (physical USB port) instead. Keep each cable in the same Pi
+socket after that. The LiDAR port can be overridden with `laser_port:=...`;
+the controller port is configured in `config/bridge_params.yaml`.
 
 ## LiDAR transform verification
 
