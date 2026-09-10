@@ -80,6 +80,10 @@ class CmdVelSerialBridge(Node):
             1.0 / self.serial_read_rate_hz,
             self.read_serial,
         )
+        self._odom_watchdog_timer = self.create_timer(
+            2.0,
+            self._warn_if_no_odometry,
+        )
 
         self._send_message(ModeCommand("AUTO"))
         self.get_logger().info(
@@ -271,11 +275,21 @@ class CmdVelSerialBridge(Node):
 
             if isinstance(message, OdomMessage):
                 self._process_odometry(message, line)
+            elif isinstance(message, AckMessage):
+                if not message.detail.startswith("V,"):
+                    self.get_logger().info(line)
             elif isinstance(
                 message,
-                (AckMessage, WarnMessage, ErrMessage, ModeCommand),
+                (WarnMessage, ErrMessage, ModeCommand),
             ):
                 self.get_logger().info(line)
+
+    def _warn_if_no_odometry(self) -> None:
+        """Surface a silent serial RX failure instead of a missing TF."""
+        if self.odom_packet_count == 0:
+            self.get_logger().warning(
+                "No ODOM lines received from the ESP32 yet"
+            )
 
     def _process_odometry(
         self,
