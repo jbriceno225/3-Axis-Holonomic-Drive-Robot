@@ -12,7 +12,7 @@ Current geometry used by software:
 - wheel radius: `0.050 m`
 - center-to-wheel distance: `0.2921 m`
 - approximate chassis envelope: `0.50 m`
-- provisional `base_link -> base_laser`: `(0.114, 0, 0.10977) m`, yaw
+- provisional `base_link -> base_laser`: `(0.114, 0, 0.08477) m`, yaw
   `-pi/2`
 
 The wheel values are the current measured/configured starting point, not a

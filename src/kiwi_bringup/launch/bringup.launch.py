@@ -118,7 +118,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             "laser_z",
-            default_value="0.10977",
+            default_value="0.08477",
             description="Provisional laser Z offset; physically verify.",
         ),
         DeclareLaunchArgument(

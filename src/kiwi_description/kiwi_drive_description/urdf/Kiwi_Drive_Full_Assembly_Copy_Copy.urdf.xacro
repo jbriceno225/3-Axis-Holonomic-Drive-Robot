@@ -11,7 +11,7 @@
   -->
   <xacro:arg name="laser_x" default="0.114"/>
   <xacro:arg name="laser_y" default="0.0"/>
-  <xacro:arg name="laser_z" default="0.10977"/>
+  <xacro:arg name="laser_z" default="0.08477"/>
   <xacro:arg name="laser_yaw" default="-1.5707963267948966"/>
 
   <!-- Materials (shared across all assemblies) -->

@@ -106,7 +106,7 @@ the controller port is configured in `config/bridge_params.yaml`.
 
 The provisional `base_link` to `base_laser` scan origin is:
 
-- translation: `(0.114, 0.0, 0.10977)` metres
+- translation: `(0.114, 0.0, 0.08477)` metres
 - yaw: `-1.5707963267948966` radians (`-pi/2`)
 
 These values preserve the existing physically intended patch transform, but
