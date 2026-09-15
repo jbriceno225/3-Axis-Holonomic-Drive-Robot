@@ -214,6 +214,11 @@ float rawRPM[3] = {0.0f, 0.0f, 0.0f};
 float velocityIntegral[3] = {0.0f, 0.0f, 0.0f};
 float previousVelocityError[3] = {0.0f, 0.0f, 0.0f};
 
+// Last command actually applied to each H-bridge. This is emitted in the
+// low-rate diagnostic record so calibration uses measured, rather than
+// inferred, PID output.
+int appliedPWM[3] = {0, 0, 0};
+
 uint32_t previousPIDTimeUs = 0;
 
 
@@ -682,6 +687,8 @@ void driveKiwi(
 // ---------------------------------------------------------------------------------------------------------------------------
 
 void applyMotorCommand(uint8_t motorIndex, int command) {
+  appliedPWM[motorIndex] = command;
+
   switch (motorIndex) {
     case 0:
       motor1Command = command;
@@ -1267,6 +1274,8 @@ void processControllers() {
 // ---------------------------------------------------------------------------------------------------------------------------
 
 void sendOdometryTelemetry() {
+  static uint8_t diagnosticDivider = 0;
+
   const unsigned long now = millis();
 
   if (
@@ -1299,6 +1308,22 @@ void sendOdometryTelemetry() {
     static_cast<long>(count2),
     static_cast<long>(count3)
   );
+
+  // One diagnostic record per second. ODOM remains unchanged at 20 Hz so the
+  // ROS bridge continues to receive its established wire format.
+  diagnosticDivider++;
+  if (diagnosticDivider >= 20) {
+    diagnosticDivider = 0;
+    Serial.printf(
+      "PID,%.4f,%.4f,%.4f,%d,%.4f,%.4f,%.4f,%d,%.4f,%.4f,%.4f,%d\n",
+      targetRPM[0], measuredRPM[0],
+      targetRPM[0] - measuredRPM[0], appliedPWM[0],
+      targetRPM[1], measuredRPM[1],
+      targetRPM[1] - measuredRPM[1], appliedPWM[1],
+      targetRPM[2], measuredRPM[2],
+      targetRPM[2] - measuredRPM[2], appliedPWM[2]
+    );
+  }
 }
 
 
