@@ -1,0 +1,7 @@
+image: apartment_map_20260915_112516.pgm
+mode: trinary
+resolution: 0.050
+origin: [-2.114, -1.514, 0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
