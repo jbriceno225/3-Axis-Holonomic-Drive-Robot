@@ -86,7 +86,7 @@ const int RIGHT_STICK_DEADZONE = 30;
 const int MAX_PWM = 240;
 
 // Smallest PWM that reliably moves the motors.
-const int MIN_PWM = 45;
+const int MIN_PWM = 0;
 
 // Overall joystick sensitivity.
 const float TRANSLATION_SCALE = 1.00f;
