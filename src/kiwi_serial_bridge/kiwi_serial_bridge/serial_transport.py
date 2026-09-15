@@ -33,6 +33,13 @@ class SerialTransport:
                 rtscts=False,
                 dsrdtr=False,
             )
+
+        # CP2102 modem-control defaults can reset or stall ESP32 boards.
+        # This transport uses no modem flow control, so keep both lines low.
+        self._serial.dtr = False
+        self._serial.rts = False
+
+        if serial_device is None:
             time.sleep(startup_delay)
             self._serial.reset_input_buffer()
             self._serial.reset_output_buffer()

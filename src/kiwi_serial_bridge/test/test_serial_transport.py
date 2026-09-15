@@ -53,3 +53,17 @@ def test_reads_when_in_waiting_is_zero():
         "ACK,MODE,AUTO",
         "ODOM,0.0000,0.0000,0.0000,0,0,0",
     ]
+
+
+def test_deasserts_modem_control_lines_on_open():
+    """CP2102 control lines must not reset or hold the ESP32 at boot."""
+    fake = FakeSerial(b"")
+    fake.dtr = True
+    fake.rts = True
+    SerialTransport(
+        port="/dev/null",
+        baud_rate=115200,
+        serial_device=fake,
+    )
+    assert fake.dtr is False
+    assert fake.rts is False
