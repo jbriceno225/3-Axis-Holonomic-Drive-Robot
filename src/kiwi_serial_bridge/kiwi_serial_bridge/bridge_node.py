@@ -372,7 +372,7 @@ class CmdVelSerialBridge(Node):
         for index, value in zip((0, 7, 14, 21, 28, 35), diagonal):
             covariance[index] = value
 
-    def destroy_node(self) -> bool:
+    def destroy_node(self) -> None:
         """Stop the controller and close serial before ROS teardown."""
         if not self._transport_closed:
             self._send_message(StopCommand())
@@ -382,4 +382,4 @@ class CmdVelSerialBridge(Node):
             except SerialException:
                 pass
             self._transport_closed = True
-        return super().destroy_node()
+        super().destroy_node()

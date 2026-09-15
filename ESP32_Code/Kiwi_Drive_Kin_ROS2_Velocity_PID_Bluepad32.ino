@@ -85,8 +85,9 @@ const int RIGHT_STICK_DEADZONE = 30;
 // Maximum PWM the speed controller may command.
 const int MAX_PWM = 240;
 
-// Smallest PWM that reliably moves the motors.
-const int MIN_PWM = 45;
+// Disabled: a hard PWM floor destroys the relative wheel-speed ratios
+// required for low-speed holonomic motion. Characterize compensation first.
+const int MIN_PWM = 0;
 
 // Overall joystick sensitivity.
 const float TRANSLATION_SCALE = 1.00f;

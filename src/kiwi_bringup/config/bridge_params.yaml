@@ -12,8 +12,8 @@ cmd_vel_serial_bridge:
     cmd_vel_topic: cmd_vel
     odom_topic: odom
 
-    max_linear_speed: 0.30
-    max_angular_speed: 1.00
+    max_linear_speed: 0.6283
+    max_angular_speed: 1.7208
     wheel_radius: 0.050
     wheel_distance: 0.2921
 
