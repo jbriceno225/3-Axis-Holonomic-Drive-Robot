@@ -14,13 +14,13 @@ Firmware:
 - target ceiling: `120 RPM`
 - gains per wheel: `Kp=0.80`, `Ki=0.30`, `Kd=0.05`
 - RPM filter alpha: `0.30`
-- minimum PWM: `45`; maximum PWM: `240`
+- minimum PWM: `0` (hard floor disabled to preserve Kiwi wheel-speed ratios); maximum PWM: `240`
 
 ROS bridge:
 
 - wheel radius: `0.050 m`
 - center-to-wheel distance: `0.2921 m`
-- maximum command scaling: `0.30 m/s`, `1.00 rad/s`
+- SI-to-normalized command scaling: `0.6283 m/s`, `1.7208 rad/s`
 
 These are implementation values, not a guarantee of calibrated performance.
 
